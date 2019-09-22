@@ -1,6 +1,6 @@
 
 # Breaking idle V. 0.20 Alpha
-https://breakingidle.000webhostapp.com/  
+http://breakingidle.bplaced.net/ 
 Hi, this game is based on my idle.js Library.  
 I want this game to be as open source as possible, so anyone who wants something in it, just write me add it yourself. Within the coming days, i will hopefully have a domain, so that i don't have to use this crappy free hoster anymore.  
   
