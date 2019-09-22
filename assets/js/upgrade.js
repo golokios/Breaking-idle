@@ -72,7 +72,7 @@ Upgrade.prototype.buy = function() {
             if (gameData.methPerSecond >= this.perSecond) {
                 gameData.moneyPerSecond += this.perSecond * gameData.methPrice;
                 gameData.methPerSecond -= this.perSecond;
-                this.perClick *= 1.05;
+                this.perClick *= 1;
                 this.perSecond *= 1;
                 this.level++;
                 this.cost *= 1.07;
