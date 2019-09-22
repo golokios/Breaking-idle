@@ -1,4 +1,4 @@
-function Upgrade(name, id, type, description, cost, level, perClick, perSecond) {
+function Upgrade(name, id, type, description, cost, level, perClick, perSecond, val) {
     this.name = name;
     this.id = id;
     this.description = description;
@@ -24,6 +24,8 @@ function Upgrade(name, id, type, description, cost, level, perClick, perSecond) 
     }
     this.drawn = false;
     this.type = type;
+    this.increased = false;
+    this.increaseBy = val;
     this.draw();
 }
 
@@ -46,6 +48,7 @@ Upgrade.prototype.buy = function() {
             this.level++;
             this.cost *= 1.1;
             this.drawMps = this.perSecond;
+            this.increaseMethValue(this.increaseBy);
             this.update();
         }
     } else if (this.type === "meth") {
@@ -66,6 +69,7 @@ Upgrade.prototype.buy = function() {
             this.level++;
             this.cost *= 1.1;
             this.drawMps = this.perSecond;
+            this.increaseMethValue(this.increaseBy);
             this.update();
         }
     } else if (this.type === "sellMeth") {
@@ -79,6 +83,7 @@ Upgrade.prototype.buy = function() {
                 this.level++;
                 this.cost *= 1.07;
                 this.drawMps = this.perSecond * gameData.methPrice;
+                this.increaseMethValue(this.increaseBy);
                 this.update();
             } else {
                 alert(`You need ${r(this.perSecond, 2)}G meth per second for this. You currently have ${r(gameData.methPerSecond, 2)}G`);
@@ -131,6 +136,18 @@ Upgrade.prototype.draw = function() {
    		`);
     } else {
         this.update();
+    }
+}
+
+Upgrade.prototype.increaseMethValue = function(val) {
+    if(this.increased === false){
+        if (val > 0){
+            gameData.methPrice += val;
+            this.increased = true;
+        } else {
+            gameData.methPrice -= val;
+            this.increased = true;
+        }      
     }
 }
 

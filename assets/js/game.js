@@ -5,7 +5,7 @@ let gameData = {
     meth: 0,
     methPerSecond: 0,
     methPerClick: 0,
-    methPrice: 15,
+    methPrice: 0,
     clicked: 0,
     clickLimit: 1,
 }
@@ -28,7 +28,6 @@ function updater() {
     document.getElementById("moneyPerClick").innerHTML = `${r(gameData.moneyPerClick, 2)}$`;
     document.getElementById("moneyPerSecond").innerHTML = `${r(gameData.moneyPerSecond, 2)}$`;
     document.getElementById("methPrice").innerHTML = `${r(gameData.methPrice, 2)}$ per G`;
-    document.getElementById("methPerClick").innerHTML = `${r(gameData.methPerClick, 2)}G`;
     document.getElementById("methPerSecond").innerHTML = `${r(gameData.methPerSecond, 2)}G`;
 }
 

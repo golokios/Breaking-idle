@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Breaking idle</title>
+    <title>Dashboard - Brand</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
@@ -16,11 +16,13 @@
             <div class="container-fluid d-flex flex-column p-0">
                 <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
                     <div class="sidebar-brand-icon rotate-n-15"><i class="fas fa-glass-whiskey"></i></div>
-                    <div class="sidebar-brand-text mx-3"><span>Breaking Idle</span></div>
+                    <div class="sidebar-brand-text mx-3"><span>Breaking Idle<br>V. 0.20 Alpha<br></span></div>
                 </a>
                 <hr class="sidebar-divider my-0">
                 <ul class="nav navbar-nav text-light" id="accordionSidebar">
-                    <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html"><i class="fas fa-tachometer-alt"></i><span>Game</span></a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="changelog.html"><i class="fas fa-history"></i><span>Changelog</span></a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="achievements.html"><i class="fas fa-trophy"></i><span>Achievement</span></a></li>
                 </ul>
                 <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
             </div>
@@ -28,9 +30,8 @@
         <div class="d-flex flex-column" id="content-wrapper">
             <div id="content">
                 <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
-                    <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle mr-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>
-                        <button class="btn btn-danger" id="deleteSave" type="button">Delete savegame</button>
-                        <ul class="nav navbar-nav flex-nowrap ml-auto">
+                    <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle mr-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button><button class="btn btn-danger" id="deleteSave" type="button">Delete savegame</button>
+                        <ul class="nav navbar-nav d-none flex-nowrap ml-auto">
                             <li class="nav-item dropdown d-sm-none no-arrow"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#"><i class="fas fa-search"></i></a>
                                 <div class="dropdown-menu dropdown-menu-right p-3 animated--grow-in" role="menu" aria-labelledby="searchDropdown">
                                     <form class="form-inline mr-auto navbar-search w-100">
@@ -118,7 +119,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-auto col-md-6 col-xl-3 mb-4">
+                        <div class="col-auto col-md-6 col-xl-4 mb-4">
                             <div class="card shadow border-left-info py-2">
                                 <div class="card-body">
                                     <div class="row align-items-center no-gutters">
@@ -131,7 +132,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-auto col-md-6 col-xl-3 mb-4">
+                        <div class="col-auto col-md-6 col-xl-4 mb-4">
                             <div class="card shadow border-left-primary py-2">
                                 <div class="card-body">
                                     <div class="row align-items-center no-gutters">
@@ -144,20 +145,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-auto col-md-6 col-xl-3 mb-4">
-                            <div class="card shadow border-left-success py-2">
-                                <div class="card-body">
-                                    <div class="row align-items-center no-gutters">
-                                        <div class="col mr-2">
-                                            <div class="text-uppercase text-success font-weight-bold text-xs mb-1"><span>Meth (per click)</span></div>
-                                            <div class="text-dark font-weight-bold h5 mb-0"><span id="methPerClick">0G</span></div>
-                                        </div>
-                                        <div class="col-auto"><i class="fas fa-dollar-sign fa-2x text-gray-300"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-auto col-md-6 col-xl-3 mb-4">
+                        <div class="col-auto col-md-6 col-xl-4 mb-4">
                             <div class="card shadow border-left-success py-2">
                                 <div class="card-body">
                                     <div class="row align-items-center no-gutters">
@@ -172,7 +160,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-7 col-xl-8" style="overflow:scroll">
+                        <div class="col-lg-7 col-xl-8" style="overflow: scroll;max-height: 900px;">
                             <div class="card shadow mb-4">
                                 <div class="card-header d-flex justify-content-between align-items-center">
                                     <h6 class="text-primary font-weight-bold m-0">Money makers</h6>
@@ -183,7 +171,10 @@
                                             <div class="row align-items-center no-gutters">
                                                 <div class="col mr-2">
                                                     <div class="text-uppercase text-primary d-xl-flex justify-content-between font-weight-bold text-xs mb-1"><span>Cup</span><span>Level: 1 | MPS: 0.01 | MPC: 0.01<br></span></div>
-                                                    <div class="text-dark font-weight-bold h5 mb-0"><span>$0.25</span></div>
+                                                    <div class="text-dark font-weight-bold h5 mb-0"><span>$0.25</span>
+                                                        <p id="description" class="m-0" style="font-size: 16px;color: rgb(136,136,136);font-weight: normal;">The styling for this basic card example is created by using default Bootstrap utility classes. By using utility classes, the style of the card component can be easily modified with no need for any
+                                                            custom CSS!</p>
+                                                    </div>
                                                 </div>
                                                 <div class="col-auto d-xl-flex align-items-xl-center"><button class="btn btn-primary" type="button" style="margin-right: 20px;margin-left: 10px;">Buy this shit</button><i class="fas fa-dollar-sign fa-2x text-gray-300"></i></div>
                                             </div>
@@ -237,9 +228,22 @@
                             </div>
                             <div class="card shadow mb-4">
                                 <div class="card-header d-flex justify-content-between align-items-center">
-                                    <h6 class="text-primary font-weight-bold m-0">Click to get meth</h6>
+                                    <h6 class="text-primary font-weight-bold m-0">Upgrades (Doesn't work yet)</h6>
                                 </div>
-                                <div class="card-body text-center"><img id="getMeth" src="assets/img/Slice1.png" width="200px" style="cursor: pointer;"></div>
+                                <div class="card-body text-center" id="upgradeContainer" style="max-height: 400px; overflow: scroll;">
+                                    <div class="card shadow d-none border-left-primary py-2" id="singleUpgrade" style="margin-bottom: 10px;">
+                                        <div class="card-body">
+                                            <div class="row d-flex d-xl-flex flex-column align-items-center justify-content-xl-center no-gutters">
+                                                <div class="col mr-2">
+                                                    <div class="text-uppercase text-center text-primary d-xl-flex justify-content-between justify-content-xl-center font-weight-bold text-xs mb-1"><span>Be Cute<br></span></div>
+                                                    <div class="text-dark font-weight-bold h5 mb-0">
+                                                        <p id="description" class="m-0" style="font-size: 16px;color: rgb(136,136,136);font-weight: normal;">Get extra cute and get more money</p><span>$25</span></div>
+                                                </div>
+                                                <div class="col-auto d-xl-flex align-items-xl-center"><button class="btn btn-primary" type="button" style="margin-right: 0px;margin-left: 0px;">Buy this shit</button></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -255,12 +259,12 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
     <script src="assets/js/theme.js"></script>
+    <script src="assets/js/game.js"></script>
     <script src="assets/js/round.js"></script>
     <script src="assets/js/upgrade.js"></script>
-    <script src="assets/js/game.js"></script>
-    <script src="assets/js/getMoney.js"></script>
-    <script src="assets/js/getMeth.js"></script>
+    <script src="assets/js/onetimeupgrades.js"></script>
     <script src="assets/js/upgrades.js"></script>
+    <script src="assets/js/getMoney.js"></script>
 </body>
 
 </html>

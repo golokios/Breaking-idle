@@ -1,5 +1,5 @@
 
-# Breaking idle V. 0.10 Alpha
+# Breaking idle V. 0.20 Alpha
 https://breakingidle.000webhostapp.com/  
 Hi, this game is based on my idle.js Library.  
 I want this game to be as open source as possible, so anyone who wants something in it, just write me add it yourself. Within the coming days, i will hopefully have a domain, so that i don't have to use this crappy free hoster anymore.  
@@ -26,6 +26,14 @@ In the asstes/js/game.js file can you change the basic game settings. If you wan
     clickLimit: 1,
     }
 ## Change log:
+### *V. 0.20 Alpha: Content Patch*
+-- Added 3 new Meth upgrades
+-- Added 3 new Meth --> Money upgrades
+-- Added one time Upgrades on the right of the screen
+-- Tweaked some more numbers (still needs alot of testing)
+-- Bugfixing
+-- Removed the "meth clicker" aspect of the game
+
 ### *V. 0.11 Alpha: Small fixes and tweaks*
 -- Changed the pricing a bit
 -- Fixed a few things in the background
