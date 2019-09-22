@@ -26,6 +26,8 @@ In the asstes/js/game.js file can you change the basic game settings. If you wan
     clickLimit: 1,
     }
 ## Change log:
+### *V. 0.21 Alpha: Grammar Changes*
+-- Better grammar and name changes
 ### *V. 0.20 Alpha: Content Patch*
 -- Added 3 new Meth upgrades
 -- Added 3 new Meth --> Money upgrades
