@@ -45,6 +45,7 @@ Upgrade.prototype.buy = function() {
             this.perSecond *= 1.01;
             this.level++;
             this.cost *= 1.1;
+            this.drawMps = this.perSecond;
             this.update();
         }
     } else if (this.type === "meth") {
@@ -64,6 +65,7 @@ Upgrade.prototype.buy = function() {
             this.perSecond *= 1.01;
             this.level++;
             this.cost *= 1.1;
+            this.drawMps = this.perSecond;
             this.update();
         }
     } else if (this.type === "sellMeth") {
@@ -76,6 +78,7 @@ Upgrade.prototype.buy = function() {
                 this.perSecond *= 1;
                 this.level++;
                 this.cost *= 1.07;
+                this.drawMps = this.perSecond * gameData.methPrice;
                 this.update();
             } else {
                 alert(`You need ${r(this.perSecond, 2)}G meth per second for this. You currently have ${r(gameData.methPerSecond, 2)}G`);
@@ -98,7 +101,7 @@ Upgrade.prototype.draw = function() {
         } else if (this.type === "sellMeth") {
             this.container = "sellMethUpgradeContainer";
             this.btnColor = "success";
-            this.drawMps = this.perSecond * gameData.methPrice;
+            this.drawMps = this.perSecond;
         }
         document.getElementById(this.container).innerHTML += `
             <div class="card shadow border-left-primary py-2" style="margin-bottom: 10px;">
