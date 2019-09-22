@@ -73,17 +73,16 @@ Upgrade.prototype.buy = function() {
                 gameData.moneyPerSecond += this.perSecond * gameData.methPrice;
                 gameData.methPerSecond -= this.perSecond;
                 this.perClick *= 1.05;
-                this.perSecond *= 1.01;
+                this.perSecond *= 1;
                 this.level++;
-                this.cost *= 1.1;
+                this.cost *= 1.07;
                 this.update();
             } else {
-                alert(`You need more meth per second`);
+                alert(`You need ${r(this.perSecond, 2)}G meth per second for this. You currently have ${r(gameData.methPerSecond, 2)}G`);
             }
         }
     }
     this.save();
-    
 }
 
 Upgrade.prototype.draw = function() {
@@ -91,19 +90,22 @@ Upgrade.prototype.draw = function() {
         if (this.type === "money") {
             this.container = "moneyUpgradeContainer";
             this.btnColor = "primary";
+            this.drawMps = this.perSecond;
         } else if (this.type === "meth") {
             this.container = "methUpgradeContainer";
             this.btnColor = "info";
+            this.drawMps = this.perSecond;
         } else if (this.type === "sellMeth") {
             this.container = "sellMethUpgradeContainer";
             this.btnColor = "success";
+            this.drawMps = this.perSecond * gameData.methPrice;
         }
         document.getElementById(this.container).innerHTML += `
             <div class="card shadow border-left-primary py-2" style="margin-bottom: 10px;">
                 <div class="card-body">
                     <div class="row align-items-center no-gutters">
                         <div class="col mr-2">
-                            <div class="text-uppercase text-primary d-xl-flex justify-content-between font-weight-bold text-xs mb-1"><span>${this.name}</span><span id="${this.id}levelMpsMpc">Level: ${this.level} | MPS: ${r(this.perSecond, 2)}$ | MPC: ${r(this.perClick, 2)}$<br></span></div>
+                            <div class="text-uppercase text-primary d-xl-flex justify-content-between font-weight-bold text-xs mb-1"><span>${this.name}</span><span id="${this.id}levelMpsMpc">Level: ${this.level} | MPS: ${r(this.drawMps, 2)}$ | MPC: ${r(this.perClick, 2)}$<br></span></div>
                             <div class="text-dark font-weight-bold h5 mb-0"><span id="${this.id}cost">${r(this.cost, 2)}$</span>
                                 <p id="description" class="m-0" style="font-size: 16px;color: rgb(136,136,136);font-weight: normal;">${this.description}</p>
                             </div>

@@ -26,6 +26,11 @@ In the asstes/js/game.js file can you change the basic game settings. If you wan
     clickLimit: 1,
     }
 ## Change log:
+### *V. 0.11 Alpha: Small fixes and tweaks*
+-- Changed the pricing a bit
+-- Fixed a few things in the background
+-- Fixed 1 spelling error
+
 ### *V. 0.10 Alpha: First public release*
 -- First release of this game
 -- 7 Different upgrades
