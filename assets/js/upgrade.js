@@ -132,7 +132,7 @@ Upgrade.prototype.draw = function() {
 }
 
 Upgrade.prototype.update = function() {
-    document.getElementById(`${this.id}levelMpsMpc`).innerHTML = `Level: ${this.level} | MPS: ${r(this.perSecond, 2)}$ | MPC: ${r(this.perClick, 2)}$<br>`
+    document.getElementById(`${this.id}levelMpsMpc`).innerHTML = `Level: ${this.level} | MPS: ${r(this.drawMps, 2)}$ | MPC: ${r(this.perClick, 2)}$<br>`
     document.getElementById(`${this.id}cost`).innerHTML = `${r(this.cost, 2)}$`
 }
 
