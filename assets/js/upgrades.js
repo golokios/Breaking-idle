@@ -47,7 +47,7 @@ let bribe = new Upgrade(
 	"bribe", //ID... Needs to be the same as the objectName
 	"money", //Type of upgrade (money, meth, sellMeth)
 	"Bribe some other homeless people in your area to leave, so you can make more money", //Description
-	500, //Price
+	400, //Price
 	0, //Level
 	0, //Money/Meth per click
 	1 //Money/Meth per second
@@ -58,7 +58,7 @@ let testTube = new Upgrade(
 	"testTube", //ID... Needs to be the same as the objectName
 	"meth", //Type of upgrade (money, meth, sellMeth)
 	"Get yourself a Test tube and start making the worst meth on earth", //Description
-	1500, //Price
+	1000, //Price
 	0, //Level
 	0.05, //Money/Meth per click
 	0.25 //Money/Meth per second
@@ -69,8 +69,8 @@ let sellYourself = new Upgrade(
 	"sellYourself", //ID... Needs to be the same as the objectName
 	"sellMeth", //Type of upgrade (money, meth, sellMeth)
 	"Because nobody trusts you yet, you will have to sell your meth alone", //Description
-	750, //Price
+	500, //Price
 	0, //Level
 	0, //Money/Meth per click
-	0.05 //Money/Meth per second
+	0.1 //Money/Meth per second
 );

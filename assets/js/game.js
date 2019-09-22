@@ -5,7 +5,7 @@ let gameData = {
     meth: 0,
     methPerSecond: 0,
     methPerClick: 0,
-    methPrice: 5,
+    methPrice: 15,
     clicked: 0,
     clickLimit: 1,
 }
